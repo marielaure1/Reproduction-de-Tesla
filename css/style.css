@@ -7,6 +7,11 @@ body {
   color: #000;
   font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
   scroll-behavior: smooth;
+  overflow: hidden;
+}
+
+a, button {
+  cursor: pointer;
 }
 
 header {
@@ -85,6 +90,119 @@ header nav .animate-backdrop {
   -webkit-transition: opacity 0.5s ease, visibility 0s 0.5s, left 0.5s ease-out;
   transition: opacity 0.5s ease, visibility 0s 0.5s, left 0.5s ease-out;
   visibility: hidden;
+}
+
+.menu-backdrop {
+  display: none;
+}
+
+.menu-backdrop.active {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 7;
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  overflow-y: scroll;
+}
+
+.menu-backdrop.active .menu {
+  width: 22%;
+  height: -webkit-fit-content;
+  height: -moz-fit-content;
+  height: fit-content;
+  background-color: #FFF;
+  position: absolute;
+  right: 0;
+  padding: 40px 30px;
+}
+
+.menu-backdrop.active .menu button {
+  width: 30px;
+  height: 30px;
+  border-radius: 15px;
+  background-color: inherit;
+  outline: none;
+  border: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  justify-self: center;
+  float: right;
+}
+
+.menu-backdrop.active .menu button ion-icon {
+  font-size: 25px;
+  font-weight: 500;
+  color: var(--dark-black);
+}
+
+.menu-backdrop.active .menu button:hover {
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.048);
+}
+
+.menu-backdrop.active .menu div {
+  margin-top: 50px;
+}
+
+.menu-backdrop.active .menu div a {
+  display: block;
+  color: var(--dark-black);
+  font-size: 16px;
+  padding: 12px 12px;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+.menu-backdrop.active .menu div a span:nth-child(1) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  height: 20px;
+}
+
+.menu-backdrop.active .menu div a span:nth-child(1) ion-icon {
+  font-size: 20px;
+  margin-right: 10px;
+}
+
+.menu-backdrop.active .menu div a span:nth-child(2) {
+  margin-left: 30px;
+  font-size: 14px;
+  color: #393c41;
+  padding-bottom: 1px;
+  position: relative;
+}
+
+.menu-backdrop.active .menu div a span:nth-child(2):before {
+  position: absolute;
+  bottom: 0;
+  content: "";
+  width: 100%;
+  height: 2px;
+  background-color: #000;
+  opacity: 0;
+  -webkit-transition: opacity 0.5s;
+  transition: opacity 0.5s;
+}
+
+.menu-backdrop.active .menu div a span:nth-child(2):hover::before {
+  opacity: 1;
+}
+
+.menu-backdrop.active .menu div a:hover {
+  -webkit-backdrop-filter: blur(16px);
+          backdrop-filter: blur(16px);
+  background-color: rgba(0, 0, 0, 0.048);
+  border-radius: 12px;
 }
 
 main {

@@ -11,6 +11,15 @@ $("nav").mouseleave(()=>{
 })
 
 
+$(".menu-open").click(()=>{
+    $(".menu-backdrop").addClass("active")
+})
+
+$(".menu-close").click(()=>{
+    $(".menu-backdrop").removeClass("active")
+})
+
+
 // $("main").scroll(()=>{
 //     $(".models").each((e, element)=>{
 //         $(".content").eq(e).removeClass("active")

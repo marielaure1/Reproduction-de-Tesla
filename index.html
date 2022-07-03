@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="css/reset.css" />
         <link rel="stylesheet" href="css/style.css" />
         <script src="https://code.jquery.com/jquery-3.6.0.slim.js" integrity="sha256-HwWONEZrpuoh951cQD1ov2HUK5zA5DwJ1DNUXaM6FsY=" crossorigin="anonymous"></script>
+        <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+        <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
         <script src="js/main.js" defer></script>
     </head>
     <body>
@@ -34,12 +36,36 @@
                     <a class="nav-item desktop" href="">Assistance</a>
                     <a class="nav-item desktop" href="">Shop</a>
                     <a class="nav-item desktop" href="">Compte</a>
-                    <a class="nav-item" href="">Menu</a>
+                    <a class="nav-item menu-open">Menu</a>
                 </div>
             </nav>
         </header>
+
+        <section class="menu-backdrop">
+            <div class="menu">
+                
+                <button type="button" class="menu-close"><ion-icon name="close-outline"></ion-icon></button>
+                <div>
+                    <a href="">Véhicules Disponibles</a>
+                    <a href="">Véhicules D'occasion</a>
+                    <a href="">Reprise</a>
+                    <a href="">Essais</a>
+                    <a href="">Véhicules de société</a>
+                    <a href="">Cybertruck</a>
+                    <a href="">Roadster</a>
+                    <a href="">Électricité pour les professionnels</a>
+                    <a href="">Industries</a>
+                    <a href="">Énergie</a>
+                    <a href="">Nous trouver</a>
+                    <a href="">Événements</a>
+                    <a href="">Assistance</a>
+                    <a href="">Relations investisseurs</a>
+                    <a><span><ion-icon name="globe-outline"></ion-icon>France</span><span>Français</span></a>
+                </div>
+                
+            </div>
+        </section>
         <main>
-               
             <section class="models active" style="background-image: url('images/model-y.jpg');">
                 <div class="content">
                     <h2>Model Y</h2>
