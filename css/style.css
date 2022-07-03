@@ -257,7 +257,7 @@ main .content > p {
 
 main .content .bottom {
   text-align: center;
-  height: 115px;
+  height: 150px;
   position: absolute;
   bottom: 0;
   display: -webkit-box;
@@ -320,6 +320,19 @@ main .content .bottom > a {
   -webkit-box-shadow: 0 1px 0 0 var(--dark-black);
           box-shadow: 0 1px 0 0 var(--dark-black);
   font-size: 14px;
+  margin-bottom: 20px;
+}
+
+main .content .bottom .scroll-indication {
+  height: 30px;
+  width: 20px;
+}
+
+main .content .bottom .scroll-indication ion-icon {
+  font-size: 24px;
+  -webkit-animation: scroll 1.8s ease infinite;
+          animation: scroll 1.8s ease infinite;
+  color: var(--dark-black);
 }
 
 main .models {
@@ -363,5 +376,47 @@ footer a {
   color: var(--dark-black);
   text-decoration: none;
   margin-right: 20px;
+}
+
+@-webkit-keyframes scroll {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 10px;
+  }
+  40% {
+    margin-top: 0px;
+  }
+  60% {
+    margin-top: 3px;
+  }
+  80% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
+}
+
+@keyframes scroll {
+  0% {
+    margin-top: 0;
+  }
+  20% {
+    margin-top: 10px;
+  }
+  40% {
+    margin-top: 0px;
+  }
+  60% {
+    margin-top: 3px;
+  }
+  80% {
+    margin-top: 0;
+  }
+  100% {
+    margin-top: 0;
+  }
 }
 /*# sourceMappingURL=style.css.map */
